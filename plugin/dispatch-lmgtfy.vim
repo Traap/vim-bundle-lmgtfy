@@ -2,6 +2,7 @@
 if exists('g:loaded_bundle_lmgtfy')
   finish
 endif
+let g:loaded_bundle_lmgtfy=1
 " -------------------------------------------------------------------------- }}}
 " {{{ lmgtfy | https://github.com/junegunn/dotfiles 
 "
