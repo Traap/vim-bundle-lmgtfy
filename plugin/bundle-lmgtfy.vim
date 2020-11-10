@@ -8,7 +8,6 @@ let g:loaded_bundle_lmgtfy=1
 "
 " <Leader>?/! | Google it / Feeling luckey | junegunn/dotfiles
 function! LMGTFY(pat, lucky)
-  echo "LMGTFY was called."
 
   let q = '"'.substitute(a:pat, '["\n]', ' ', 'g').'"'
   let q = substitute(q, '[[:punct:] ]',
