@@ -7,7 +7,8 @@ let g:loaded_bundle_lmgtfy=1
 " {{{ lmgtfy | https://github.com/junegunn/dotfiles 
 "
 " <Leader>?/! | Google it / Feeling luckey | junegunn/dotfiles
-function! s:goog(pat, lucky)
+function! LMGTFY(pat, lucky)
+  echo "LMGTFY was called."
 
   let q = '"'.substitute(a:pat, '["\n]', ' ', 'g').'"'
   let q = substitute(q, '[[:punct:] ]',
@@ -16,7 +17,7 @@ function! s:goog(pat, lucky)
     call system(printf('cygstart --open "https://www.google.com/search?%sq=%s"',
                    \ a:lucky ? 'btnI&' : '', q))
   else
-    call system(printf('open "https://www.google.com/search?%sq=%s"',
+    call system(printf('xdg-open "https://www.google.com/search?%sq=%s"',
                    \ a:lucky ? 'btnI&' : '', q))
   endif
 
